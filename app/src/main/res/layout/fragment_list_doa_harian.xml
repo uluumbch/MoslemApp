@@ -23,7 +23,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:listitem="@layout/list_view_item" />
+                tools:listitem="@layout/list_view_item_doa" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
