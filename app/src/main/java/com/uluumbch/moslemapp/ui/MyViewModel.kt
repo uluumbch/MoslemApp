@@ -1,5 +1,6 @@
 package com.uluumbch.moslemapp.ui
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -32,11 +33,20 @@ class MyViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 _listdoaharian.value = DoaHarianApi.retrofitServiceApi.getDoa()
+            } catch (e: Exception) {
+                Log.d("error", e.printStackTrace().toString())
+                _listdoaharian.value = DoaHarian(listOf())
+            }
+        }
+    }
+
+    fun getAsmaulHusnaList(){
+        viewModelScope.launch {
+            try {
                 _listasmaulhusna.value = DoaHarianApi.retrofitServiceApi.getAsmaulHusna()
             } catch (e: Exception) {
-                _listdoaharian.value = DoaHarian(listOf())
+                Log.d("error", e.printStackTrace().toString())
                 _listasmaulhusna.value = AsmaulHusna(listOf())
-
             }
         }
     }

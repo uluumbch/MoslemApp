@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.uluumbch.moslemapp.databinding.ListViewItemBinding
+import com.uluumbch.moslemapp.databinding.FragmentListDoaHarianBinding
 
 class ListDoaHarianFragment : Fragment() {
     private val viewModel: MyViewModel by activityViewModels()
@@ -16,11 +16,10 @@ class ListDoaHarianFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        val binding = FragmentListDoaHarianBinding.inflate(inflater)
-        val binding = ListViewItemBinding.inflate(inflater)
-        binding.lifecycleOwner = this
-        binding.viewmodel = viewModel
+        val binding = FragmentListDoaHarianBinding.inflate(inflater)
         viewModel.getDoaList()
+        binding.lifecycleOwner = this
+        binding.viewModel = viewModel
 
 
 

@@ -6,6 +6,9 @@
         <variable
             name="viewmodel"
             type="com.uluumbch.moslemapp.ui.MyViewModel" />
+        <variable
+            name="clicklistener"
+            type="com.uluumbch.moslemapp.ui.DoaHarianListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -13,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:onClick="@{() -> clicklistener.onClick(doa)}"
         app:cardElevation="4dp"
         app:cardCornerRadius="4dp">
 
