@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.uluumbch.moslemapp.network.AsmaulHusna
 import com.uluumbch.moslemapp.network.DoaHarian
-import com.uluumbch.moslemapp.network.DoaHarianApi
+import com.uluumbch.moslemapp.network.MoslemAppApi
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
@@ -32,7 +32,7 @@ class MyViewModel : ViewModel() {
     fun getDoaList() {
         viewModelScope.launch {
             try {
-                _listdoaharian.value = DoaHarianApi.retrofitServiceApi.getDoa()
+                _listdoaharian.value = MoslemAppApi.retrofitServiceApi.getDoa()
             } catch (e: Exception) {
                 Log.d("error", e.printStackTrace().toString())
                 _listdoaharian.value = DoaHarian(listOf())
@@ -43,7 +43,7 @@ class MyViewModel : ViewModel() {
     fun getAsmaulHusnaList(){
         viewModelScope.launch {
             try {
-                _listasmaulhusna.value = DoaHarianApi.retrofitServiceApi.getAsmaulHusna()
+                _listasmaulhusna.value = MoslemAppApi.retrofitServiceApi.getAsmaulHusna()
             } catch (e: Exception) {
                 Log.d("error", e.printStackTrace().toString())
                 _listasmaulhusna.value = AsmaulHusna(listOf())

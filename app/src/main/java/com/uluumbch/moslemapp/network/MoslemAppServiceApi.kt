@@ -25,7 +25,7 @@ interface DoaHarianServiceApi {
     suspend fun getAsmaulHusna(): AsmaulHusna
 }
 
-object DoaHarianApi {
+object MoslemAppApi {
     val retrofitServiceApi: DoaHarianServiceApi by lazy {
         retrofit.create(DoaHarianServiceApi::class.java)
     }
