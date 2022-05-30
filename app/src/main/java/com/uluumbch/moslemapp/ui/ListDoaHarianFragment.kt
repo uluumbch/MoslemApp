@@ -9,7 +9,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.uluumbch.moslemapp.R
 import com.uluumbch.moslemapp.databinding.FragmentListDoaHarianBinding
-import com.uluumbch.moslemapp.network.DoaHarian
 
 class ListDoaHarianFragment : Fragment() {
     private val viewModel: MyViewModel by activityViewModels()

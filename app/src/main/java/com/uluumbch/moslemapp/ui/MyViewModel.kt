@@ -5,13 +5,21 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.facebook.shimmer.Shimmer
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.uluumbch.moslemapp.network.AsmaulHusna
 import com.uluumbch.moslemapp.network.DoaHarian
 import com.uluumbch.moslemapp.network.MoslemAppApi
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
+enum class ApiStatus { LOADING, ERROR, DONE }
+
 class MyViewModel : ViewModel() {
+    // status
+    private val _status = MutableLiveData<ApiStatus>()
+    val status: LiveData<ApiStatus> = _status
+
     // penampung data untuk API doa
     private val _listdoaharian = MutableLiveData<DoaHarian>()
     val listdoaharian: LiveData<DoaHarian> = _listdoaharian
@@ -31,11 +39,14 @@ class MyViewModel : ViewModel() {
 
     fun getDoaList() {
         viewModelScope.launch {
+            _status.value = ApiStatus.LOADING
             try {
                 _listdoaharian.value = MoslemAppApi.retrofitServiceApi.getDoa()
+                _status.value = ApiStatus.DONE
             } catch (e: Exception) {
                 Log.d("error", e.printStackTrace().toString())
                 _listdoaharian.value = DoaHarian(listOf())
+                _status.value = ApiStatus.ERROR
             }
         }
     }
