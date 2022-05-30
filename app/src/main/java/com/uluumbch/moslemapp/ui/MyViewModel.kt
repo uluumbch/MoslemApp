@@ -50,4 +50,8 @@ class MyViewModel : ViewModel() {
             }
         }
     }
+
+    fun onDoaHarianCLicked(doa: DoaHarian.Data){
+        _doahariantunggal.value = doa
+    }
 }
