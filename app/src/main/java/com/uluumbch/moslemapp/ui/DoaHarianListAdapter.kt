@@ -13,7 +13,7 @@ class DoaHarianListAdapter(private val clickListener: DoaHarianListener) :
     class DoaHarianViewHolder(var binding: ListViewItemDoaBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(clickListener: DoaHarianListener, doaHarian: DoaHarian.Data) {
-            binding.viewmodel
+            binding.doa = doaHarian
             binding.clicklistener = clickListener
             binding.executePendingBindings()
         }

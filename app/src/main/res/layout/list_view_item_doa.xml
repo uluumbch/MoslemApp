@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="viewmodel"
-            type="com.uluumbch.moslemapp.ui.MyViewModel" />
+            name="doa"
+            type="com.uluumbch.moslemapp.network.DoaHarian.Data" />
         <variable
             name="clicklistener"
             type="com.uluumbch.moslemapp.ui.DoaHarianListener" />
@@ -29,7 +29,7 @@
             android:padding="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="18sp"
-            android:text="@{viewmodel.}"
+            android:text="@{doa.title.toString()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Doa sebelum makan" />
