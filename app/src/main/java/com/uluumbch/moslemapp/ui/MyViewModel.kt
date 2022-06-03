@@ -65,4 +65,8 @@ class MyViewModel : ViewModel() {
     fun onDoaHarianCLicked(doa: DoaHarian.Data){
         _doahariantunggal.value = doa
     }
+
+    fun onAsmaulHusnaCLicked(asmaulHusna: AsmaulHusna.Data){
+        _asmaulHusnaTunggal.value = asmaulHusna
+    }
 }
