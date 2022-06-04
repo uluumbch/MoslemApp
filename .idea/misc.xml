@@ -3,14 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/fragment_detail_asmaul_husna.xml" value="0.24791666666666667" />
         <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/fragment_detail_doa_harian.xml" value="0.24895833333333334" />
+        <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/fragment_list_asmaul_husna.xml" value="0.1" />
         <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/fragment_list_doa_harian.xml" value="0.1947463768115942" />
+        <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/header_nav.xml" value="0.24895833333333334" />
         <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/list_view_item.xml" value="0.1" />
         <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/list_view_item_doa.xml" value="0.264" />
+        <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/list_view_tem_asmaul_husna.xml" value="0.1" />
+        <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/menu_item.xml" value="0.20427350427350427" />
         <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/layout/placeholder_doa_harian.xml" value="0.24895833333333334" />
-        <entry key="..\:/ryan/MoslemApp/app/src/main/res/layout/fragment_detail_asmaul_husna.xml" value="0.11574074074074074" />
-        <entry key="..\:/ryan/MoslemApp/app/src/main/res/layout/fragment_list_asmaul_husna.xml" value="0.11574074074074074" />
+        <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/menu/menu_item.xml" value="0.6" />
+        <entry key="..\:/ULM/SEM4/MATERI/PEMROGRAMAN MOBILE/UAS/MoslemApp/app/src/main/res/menu/menu_nav.xml" value="0.24895833333333334" />
       </map>
     </option>
   </component>
