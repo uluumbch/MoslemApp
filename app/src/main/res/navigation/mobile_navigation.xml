@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.uluumbch.moslemapp.ui.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+        android:id="@+id/nav_asma"
+        android:name="com.uluumbch.moslemapp.ui.asmaulhusna.ListAsmaulHusnaFragment"
+        android:label="ListAsmaulHusnaFragment" >
+        <action
+            android:id="@+id/action_listAsmaulHusnaFragment_to_detailAsmaulHusnaFragment"
+            app:destination="@id/detailAsmaulHusnaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailAsmaulHusnaFragment"
+        android:name="com.uluumbch.moslemapp.ui.asmaulhusna.DetailAsmaulHusnaFragment"
+        android:label="DetailAsmaulHusnaFragment" />
+    <fragment
+        android:id="@+id/nav_doa"
+        android:name="com.uluumbch.moslemapp.ui.doaharian.ListDoaHarianFragment"
+        android:label="ListDoaHarianFragment" >
+        <action
+            android:id="@+id/action_listDoaHarianFragment_to_detailDoaHarianFragment"
+            app:destination="@id/detailDoaHarianFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailDoaHarianFragment"
+        android:name="com.uluumbch.moslemapp.ui.doaharian.DetailDoaHarianFragment"
+        android:label="DetailDoaHarianFragment" />
+</navigation>

@@ -2,62 +2,58 @@ package com.uluumbch.moslemapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.system.Os.close
-import android.system.Os.open
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.uluumbch.moslemapp.databinding.ActivityMainBinding
+import com.uluumbch.moslemapp.ui.asmaulhusna.ListAsmaulHusnaFragment
+import com.uluumbch.moslemapp.ui.doaharian.ListDoaHarianFragment
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-    //    private lateinit var navController: NavController
-    private lateinit var mToggle: ActionBarDrawerToggle
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-//        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        val binding = ActivityMainBinding.inflate(layoutInflater)
 
-        // memunculkan tombol burger menu
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        setSupportActionBar(binding.appBarMain.toolbar)
 
-        // untuk toggle open dan close navigation
-        val drawer_layout = findViewById<DrawerLayout>(R.id.drawer_layout)
-        mToggle = ActionBarDrawerToggle(this, drawer_layout, R.string.open, R.string.close)
-        // tambahkan mToggle ke drawer_layout sebagai pengendali open dan close drawer
-        drawer_layout.addDrawerListener(mToggle)
-        mToggle.syncState()
-        binding.navView.setNavigationItemSelectedListener(this)
+        val drawerLayout: DrawerLayout = binding.drawerLayout
+        val navView: NavigationView = binding.navView
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_home, R.id.nav_doa, R.id.nav_asma
+            ), drawerLayout
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
     }
 
-    override fun onOptionsItemSelected(item: android.view.MenuItem): Boolean {
-        return mToggle.onOptionsItemSelected(item)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        menuInflater.inflate(R.menu.main, menu)
+//        return true
+//    }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.doa -> {
-                Toast.makeText(applicationContext, "Fragment doa", Toast.LENGTH_SHORT).show()
-            }
-            R.id.asma -> {
-                Toast.makeText(applicationContext, "fragment asmaulhusna", Toast.LENGTH_SHORT).show()
-            }
-            R.id.info -> {
-                Toast.makeText(applicationContext, "info", Toast.LENGTH_SHORT).show()
-            }
-        }
-        return true
-
-//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-//        navController = navHostFragment.navController
-//        NavigationUI.setupActionBarWithNavController(this, navController)
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }

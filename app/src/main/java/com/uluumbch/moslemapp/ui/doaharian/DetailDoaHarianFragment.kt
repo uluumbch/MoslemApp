@@ -1,4 +1,4 @@
-package com.uluumbch.moslemapp.ui
+package com.uluumbch.moslemapp.ui.doaharian
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.uluumbch.moslemapp.databinding.FragmentDetailDoaHarianBinding
+import com.uluumbch.moslemapp.ui.MyViewModel
 
 class DetailDoaHarianFragment : Fragment() {
     private val viewModel: MyViewModel by activityViewModels()

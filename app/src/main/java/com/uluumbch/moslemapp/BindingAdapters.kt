@@ -7,7 +7,7 @@ import com.facebook.shimmer.ShimmerFrameLayout
 import com.uluumbch.moslemapp.network.AsmaulHusna
 import com.uluumbch.moslemapp.network.DoaHarian
 import com.uluumbch.moslemapp.ui.ApiStatus
-import com.uluumbch.moslemapp.ui.AsmaulHusnaListAdapter
+import com.uluumbch.moslemapp.ui.asmaulhusna.AsmaulHusnaListAdapter
 import com.uluumbch.moslemapp.ui.DoaHarianListAdapter
 
 

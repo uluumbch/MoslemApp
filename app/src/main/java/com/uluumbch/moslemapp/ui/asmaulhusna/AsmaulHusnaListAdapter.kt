@@ -1,4 +1,4 @@
-package com.uluumbch.moslemapp.ui
+package com.uluumbch.moslemapp.ui.asmaulhusna
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

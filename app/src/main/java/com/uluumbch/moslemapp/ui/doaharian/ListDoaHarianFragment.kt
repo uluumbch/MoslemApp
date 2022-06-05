@@ -1,4 +1,4 @@
-package com.uluumbch.moslemapp.ui
+package com.uluumbch.moslemapp.ui.doaharian
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.uluumbch.moslemapp.R
 import com.uluumbch.moslemapp.databinding.FragmentListDoaHarianBinding
+import com.uluumbch.moslemapp.ui.DoaHarianListAdapter
+import com.uluumbch.moslemapp.ui.DoaHarianListener
+import com.uluumbch.moslemapp.ui.MyViewModel
+
 
 class ListDoaHarianFragment : Fragment() {
     private val viewModel: MyViewModel by activityViewModels()
@@ -29,7 +33,7 @@ class ListDoaHarianFragment : Fragment() {
         })
 
 
-
         return binding.root
     }
+
 }

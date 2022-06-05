@@ -8,7 +8,7 @@
             type="com.uluumbch.moslemapp.network.AsmaulHusna.Data" />
         <variable
             name="clicklistener"
-            type="com.uluumbch.moslemapp.ui.AsmaulHusnaListener" />
+            type="com.uluumbch.moslemapp.ui.asmaulhusna.AsmaulHusnaListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
