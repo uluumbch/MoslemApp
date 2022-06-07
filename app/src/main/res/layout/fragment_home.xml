@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="12dp"
-        android:text="\nSelamat Datang di Aplikasi\nMoslemApp\nAplikasi SImpel berisi\nDoa Harian dan Asmaul Husna"
+        android:text="\nSelamat Datang di Aplikasi\nMoslemApp\nAplikasi SImpel berisi\nDoa Harian dan Asmaul Husna\ndibuat oleh\nBachrul Uluum\nMuhammad Firda Ryanifar"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
