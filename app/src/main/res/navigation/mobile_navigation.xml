@@ -15,7 +15,7 @@
     <fragment
         android:id="@+id/nav_asma"
         android:name="com.uluumbch.moslemapp.ui.asmaulhusna.ListAsmaulHusnaFragment"
-        android:label="ListAsmaulHusnaFragment" >
+        android:label="Asmaul Husna" >
         <action
             android:id="@+id/action_listAsmaulHusnaFragment_to_detailAsmaulHusnaFragment"
             app:destination="@id/detailAsmaulHusnaFragment" />
@@ -23,11 +23,11 @@
     <fragment
         android:id="@+id/detailAsmaulHusnaFragment"
         android:name="com.uluumbch.moslemapp.ui.asmaulhusna.DetailAsmaulHusnaFragment"
-        android:label="DetailAsmaulHusnaFragment" />
+        android:label="Asmaul Husna" />
     <fragment
         android:id="@+id/nav_doa"
         android:name="com.uluumbch.moslemapp.ui.doaharian.ListDoaHarianFragment"
-        android:label="ListDoaHarianFragment" >
+        android:label="Doa Harian" >
         <action
             android:id="@+id/action_listDoaHarianFragment_to_detailDoaHarianFragment"
             app:destination="@id/detailDoaHarianFragment" />
@@ -35,5 +35,5 @@
     <fragment
         android:id="@+id/detailDoaHarianFragment"
         android:name="com.uluumbch.moslemapp.ui.doaharian.DetailDoaHarianFragment"
-        android:label="DetailDoaHarianFragment" />
+        android:label="Doa Harian" />
 </navigation>

@@ -12,30 +12,51 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="8dp">
 
         <TextView
-            android:id="@+id/judul_doa"
+            android:id="@+id/judul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:text="@{viewModel.asmaulHusnaTunggal.arabic}"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:background="@color/accentBg"
+            android:textSize="32sp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Doa Sebelum Makan" />
+            tools:text="الرَّحِيمُ" />
+
 
         <TextView
-            android:id="@+id/arabic"
-            android:layout_width="match_parent"
+            android:id="@+id/latin_item"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:text="@{viewModel.asmaulHusnaTunggal.translationId}"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:textSize="28sp"
+            android:text="@{viewModel.asmaulHusnaTunggal.latin}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/judul_doa"
-            tools:text="اَلْحَمْدُ ِللهِ الَّذِىْ اَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِيْنَ" />
+            app:layout_constraintTop_toBottomOf="@+id/judul"
+            tools:text="Ar Rahim"/>
+
+        <TextView
+            android:id="@+id/translasiId_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.asmaulHusnaTunggal.translationId}"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/latin_item"
+            tools:text="Yang Memiliki Mutlak sifat Penyayang" />
+        <TextView
+            android:id="@+id/translasiEn_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.asmaulHusnaTunggal.translationId}"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/translasiId_item"
+            tools:text="The Most Merciful" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,8 @@
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:paddingBottom="2dp"
+        app:cardBackgroundColor="@color/teal"
         android:onClick="@{() -> clicklistener.onClick(doa)}"
         app:cardElevation="4dp"
         app:cardCornerRadius="4dp">
@@ -29,10 +30,15 @@
             android:padding="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:text="@{doa.title.toString()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Doa sebelum makan" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
 
 
     </com.google.android.material.card.MaterialCardView>

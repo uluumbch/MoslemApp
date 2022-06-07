@@ -20,7 +20,8 @@
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:text="@{viewModel.doahariantunggal.title}"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:background="@color/accentBg"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Doa Sebelum Makan" />
@@ -29,13 +30,59 @@
             android:id="@+id/arabic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
+            android:fontFamily="@font/isepmisbah"
+            android:padding="8dp"
             android:text="@{viewModel.doahariantunggal.arabic}"
-            android:textSize="24sp"
+            android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/judul_doa"
             tools:text="اَلْحَمْدُ ِللهِ الَّذِىْ اَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِيْنَ" />
+
+        <TextView
+            android:id="@+id/latin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@color/accentBg"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:text="Latin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arabic" />
+
+        <TextView
+            android:id="@+id/latin_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@{viewModel.doahariantunggal.latin}"
+            android:textSize="24sp"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/latin"
+            tools:text="Alloohumma barik lanaa fiimaa razatanaa waqinaa 'adzaa bannar"/>
+
+        <TextView
+            android:id="@+id/terjemahan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@color/accentBg"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:text="Terjemahan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/latin_item" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="24sp"
+            android:text="@{viewModel.doahariantunggal.translation}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terjemahan"
+            tools:text="Ya Allah, berkahilah kami dalam rezeki yang telah Engkau berikan kepada kami dan peliharalah kami dari siksa api neraka"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

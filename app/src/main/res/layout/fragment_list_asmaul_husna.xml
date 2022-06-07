@@ -21,10 +21,11 @@
             android:padding="8dp"
             app:listDataAsmaulHusna="@{viewModel.listasmaulhusna.Data}"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"
+            app:spanCount="3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/list_view_tem_asmaul_husna" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
